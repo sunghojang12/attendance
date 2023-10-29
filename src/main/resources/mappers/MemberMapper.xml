@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jg.attendance.mybatis.MemberMapper">
+
+    <!-- 사원 등록 -->
+    <insert id="save" parameterType="com.jg.attendance.domain.member.MemberRequest">
+        INSERT INTO employee (employee_num, id, pass, name, address_p, address_d, tell, department, position, hire_date)
+        values (
+                #{employee_num},
+                #{id},
+                #{pass},
+                #{name},
+                #{address_p},
+                #{address_d},
+                #{tell},
+                #{department},
+                #{position},
+                #{hire_date}
+               )
+    </insert>
+</mapper>
